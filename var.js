@@ -48,7 +48,11 @@
 // console.log(sayaSukaEskrim + " " + sayaSukaHumburger);
 
 
-const sayaSukaEskrim = "YA SANGAT SUKA";
-const sayaSukaHumburger = "APALAGI YANG INI";
+// const sayaSukaEskrim = "YA SANGAT SUKA";
+// const sayaSukaHumburger = "APALAGI YANG INI";
 
-console.log(`${sayaSukaEskrim} ${sayaSukaHumburger}`);
+// console.log(`${sayaSukaEskrim} ${sayaSukaHumburger}`);
+
+
+
+
