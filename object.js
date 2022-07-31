@@ -10,32 +10,40 @@ const Person = {
 
     // console.log(Person.fullName());
 
-    weight: 65,
+    weight: 70,
     height: 172,
-    isWeightIdeal: function () {
+    weightIdeal: function () {
         const heightMinus100 = this.height - 100;
-        return heightMinus100 - (heightMinus100 * 10) / 100 <
-            this.weight;
+        return heightMinus100 - (heightMinus100 * 10) / 100;
+        this.weight;
     },
-
+    needDiet: function () {
+        const weightIdeal = this.weightIdeal();
+        if (weightIdeal - 5 > this.weight)
+            return "you need more protein, need more " + (weightIdeal - this.weight) + "Kg";
+        else if (weightIdeal + 5 < this.weight)
+            return "you need a mayo diet, need reduce weight: " + (this.weight - weightIdeal) + "Kg";
+        return "you are in a good shape";
+    },
 
 };
 
 console.log(Person.fullName());
-console.log(Person.isWeightIdeal());
+console.log(Person.weightIdeal());
+console.log(Person.needDiet());
 
-const countries = {
-    ID: {
-        province: ["bali", "jateng", "jatim"],
-        city: ["singaraja", "gianjar", "negare", "badung"],
-    },
-    MY: {},
-    TH: {
-        province: [],
-    },
-}
+// const countries = {
+//     ID: {
+//         province: ["bali", "jateng", "jatim"],
+//         city: ["singaraja", "gianjar", "negare", "badung"],
+//     },
+//     MY: {},
+//     TH: {
+//         province: [],
+//     },
+// }
 
 
-// optional chaining (?.)
+// // optional chaining (?.)
 
-console.log(countries?.TH?.province ?? "Not Found");
+// console.log(countries?.TH?.province ?? "Not Found");
